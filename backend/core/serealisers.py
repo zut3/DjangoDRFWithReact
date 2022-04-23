@@ -1,15 +1,8 @@
-from rest_framework.serializers import ModelSerializer
-from .models import Maker, Product
+from rest_framework import serializers
+from .models import Product
 
 
-class MakerSerializer(ModelSerializer):
-
-    class Meta:
-        model = Maker
-        fields = ['id', 'name']
-
-
-class ProductSerializer(ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
